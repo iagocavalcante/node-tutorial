@@ -11,7 +11,7 @@
   <ul id="alunos">
   </ul>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 <script>
   axios.get('http://localhost:3000/api/v1/alunos')
     .then(response => criaListaDinamica(response.data))
