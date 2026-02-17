@@ -1,11 +1,46 @@
-# [rest-api-com-node-js-back-end-e-front-end](https://medium.com/@iagoangelimc/rest-api-com-node-js-back-end-e-front-end-2d6604eed890)
+# Node.js Tutorial
 
-Para executar o projeto finalizado, precisamos de dois terminais abertos, um apontando para a pasta alunos-api e outro para alunos-front.
+A simple tutorial project demonstrating a Node.js/Express API with a vanilla HTML frontend.
 
-caso for rodar a primeira vez a api, precisamos executar o `npm install`.
+## Projects
 
-Para rodar api, basta executar `npm run dev`
+- **alunos-api**: Node.js/Express REST API
+- **alunos-front**: Simple HTML frontend
 
-e para rodar o front, usamos o ``http-server`` no diretório alunos-front
+## Quick Start
 
-Ambos rodando simultaneamente.
+### Backend
+
+```bash
+cd alunos-api
+npm install
+npm run dev
+```
+
+API will run at http://localhost:3000
+
+### Frontend
+
+Simply open `alunos-front/index.html` in a browser, or serve it:
+
+```bash
+cd alunos-front
+npx serve
+```
+
+Then open http://localhost:3000
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v1/alunos | List all students |
+| POST | /api/v1/alunos | Create student |
+| PUT | /api/v1/alunos/:id | Update student |
+| DELETE | /api/v1/alunos/:id | Delete student |
+
+## Updated
+
+- Updated express to v4.21
+- Updated nodemon to v3.1
+- Updated axios to v1.7.9

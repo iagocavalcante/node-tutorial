@@ -7,21 +7,21 @@
   <title>Alunos Front</title>
 </head>
 <body>
-  <h1>Lista de alunos estático</h1>
+  <h1>Lista de alunos</h1>
   <ul id="alunos">
   </ul>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
 <script>
   axios.get('http://localhost:3000/api/v1/alunos')
     .then(response => criaListaDinamica(response.data))
     .catch(error => console.log(error))
 
-  const criaListaDinamica = ( alunos ) => {
+  const criaListaDinamica = (alunos) => {
     const ulAlunos = document.getElementById('alunos')
-    alunos.map(aluno => {
+    alunos.forEach(aluno => {
       const listaAluno = document.createElement('li')
-      listaAluno.innerHTML = `Nome: ${aluno.nome}`
+      listaAluno.textContent = `Nome: ${aluno.nome}`
       ulAlunos.appendChild(listaAluno)
     })
   }
